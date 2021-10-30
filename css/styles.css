@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Domine", serif;
+  line-height: 1.6;
+}
+
+.cards {
+  max-width: 1300px;
+  width: 90%;
+  margin: 100px auto;
+  display: flex;
+  gap: 30px;
+}
+
+.card-link:link,
+.card-link:visited {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.img-container {
+  position: relative;
+  margin-bottom: 2em;
+  overflow: hidden;
+}
+
+.card-title {
+  font-size: 2rem;
+  order: 1;
+}
+
+.card-img {
+  width: 100%;
+  scale: 1;
+  transition: all ease-in 250ms;
+}
+
+.card-profile {
+  position: relative;
+}
+
+.food-type {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: hsl(38, 81%, 63%);
+  color: #fff;
+  font-family: "Domine", serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  z-index: 1;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  transition: all ease-in 300ms;
+}
+
+.card-link:hover .card-img {
+  scale: 1.2;
+}
+
+:root {
+  --mainColor: hsl(322, 28%, 35%);
+  --mainColor-lighter: hsl(322, 10%, 95%);
+}
+.recipe {
+  width: 650px;
+  margin: 100px auto;
+  border: 5px solid var(--mainColor);
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 7em 2em 3em 2em;
+  position: relative;
+  background-color: var(--mainColor);
+  color: var(--mainColor-lighter);
+}
+
+hr {
+  width: 100%;
+  border: 0.5px solid var(--mainColor-lighter);
+  margin-bottom: 1em;
+}
+
+.header-title {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+.header-img {
+  width: 168px;
+  height: 168px;
+  border: 5px solid var(--mainColor);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+}
+
+.stars {
+  font-size: 1.5rem;
+  letter-spacing: 10px;
+}
+
+.summary,
+.ingredients,
+.instructions {
+  padding: 3em 2em;
+}
+
+.summary,
+.ingredients {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.ingredients ul {
+  padding-left: 3em;
+}
+
+.ingredients ul li {
+  margin: 1em 0;
+}
+
+.instructions ol {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  padding-left: 3em;
+}
+
+.instructions ol li {
+  margin: 0 0 0.5rem 0;
+  counter-increment: my-awesome-counter;
+  position: relative;
+  margin: 2em 0;
+}
+
+.instructions ol li::before {
+  content: counter(my-awesome-counter);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  position: absolute;
+  --size: 20px;
+  left: calc(-1 * var(--size) - 10px);
+  line-height: var(--size);
+  width: var(--size);
+  height: var(--size);
+  top: 0;
+  background: var(--mainColor);
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 1px 1px 0 #999;
+}
+
+.prep-info {
+  width: 100%;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 2em;
+}
+
+.section-title {
+  font-size: 0.938rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgb(128, 128, 128);
+}
